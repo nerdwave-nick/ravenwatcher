@@ -9,5 +9,9 @@
 - websocket connection to live update rendered content
 - event driven architecture
 
+## version 0.3.0
+- data collection / validation? 
+    - collect stats, etc.
+
 ## More to follow
 At a later date
