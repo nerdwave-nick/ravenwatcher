@@ -1,0 +1,10 @@
+{
+    "lsp": {
+        "tsserver": {
+            "disabled": true
+        },
+        "ts_ls": {
+            "disabled": true
+        }
+    }
+}
