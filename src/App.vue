@@ -1,72 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { RouterView } from 'vue-router'
+import Sidebar from './components/SidebarComponent.vue'
+import GameSelection from './components/GameSelection.vue'
 import Toast from 'primevue/toast'
-import Button from 'primevue/button'
-import Badge from 'primevue/badge'
-import Menubar from 'primevue/menubar'
-import type { MenuItem } from 'primevue/menuitem'
-import { ref } from 'vue'
-import { routes } from './router/index'
-import { useToast } from 'primevue'
 import { useDarkMode } from './hooks/dark-mode'
-
-const route = useRoute()
-
-console.log(route)
-const toast = useToast()
-const routeItems = routes.map<MenuItem>((x) => {
-  return {
-    route: x.path,
-    label: (x.name as string) ?? x.path,
-  }
-})
-const menuItems = ref<MenuItem[]>(routeItems)
-const triggerToast = async () => {
-  toast.add({
-    severity: 'info',
-    summary: 'Success',
-    detail: 'Dark mode toggled!',
-    life: 3000,
-  })
-}
-const { toggleColorMode } = useDarkMode()
+useDarkMode()
 </script>
 
 <template>
   <div class="app-container">
+    <Sidebar />
+    <GameSelection />
     <Toast position="bottom-right" />
-    <Menubar :model="menuItems">
-      <template #start>
-        <RouterLink v-ripple v-slot="{ href, navigate }" :to="routes[0]" custom>
-          <a v-ripple class="logo" :href="href" @click="navigate">
-            <img class="logo" src="@/assets/nerdwave-small.svg" />
-          </a>
-        </RouterLink>
-      </template>
-      <template #item="{ item, props }">
-        <RouterLink v-ripple v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-          <Button
-            link
-            v-ripple
-            v-bind="props.action"
-            :class="{ 'selected-underline': item.route == route.path }"
-            :href="href"
-            :label="item.label as string"
-            @click="navigate"
-          />
-        </RouterLink>
-      </template>
-      <template #end>
-        <Button
-          text
-          aria-label="Toggle Dark Mode"
-          icon="pi pi-palette"
-          @click="toggleColorMode()"
-        />
-      </template>
-    </Menubar>
-    <Button icon="pi pi-check" @click="triggerToast" />
-    <RouterView class="main-content" />
+    <div class="main-content">
+      <RouterView />
+    </div>
   </div>
 </template>
 
@@ -101,13 +49,12 @@ body {
 
 .app-container {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-direction: row;
+  height: 100vh;
 }
 
 .main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  margin: 0px;
 }
 </style>

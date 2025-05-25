@@ -5,6 +5,9 @@
         },
         "ts_ls": {
             "disabled": true
+        },
+        "angularls": {
+            "disabled": true
         }
     }
 }

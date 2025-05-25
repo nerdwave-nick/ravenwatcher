@@ -1,5 +1,3 @@
 <script setup lang="ts"></script>
 
-<template>
-  <p>Hello world!!</p>
-</template>
+<template>Fuck you, I'm home</template>
