@@ -17,10 +17,18 @@ const { home, model } = storeToRefs(ravenswatchBreadCrumbsStore)
       </router-link>
     </template>
   </Breadcrumb>
-  <RouterView class="main-content" />
+  <div class="main-content germania-one">
+    <RouterView />
+  </div>
 </template>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+.germania-one {
+  font-family: 'Germania One', system-ui;
+  font-weight: 400;
+  letter-spacing: 0ch;
+}
 .main-content {
   margin: 2em;
   margin-top: 0;

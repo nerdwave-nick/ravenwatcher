@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import ScrollPanel from 'primevue/scrollpanel'
-import WikiCategoryCardList from './../../../components/ravenswatch/wiki/WikiCategoryCardList.vue'
 import { useRavenswatchBreadCrumbsStore, WikiBreadCrumb } from '../../../stores/breadCrumbs.ts'
 const { setBreadCrumbs } = useRavenswatchBreadCrumbsStore()
 setBreadCrumbs(WikiBreadCrumb)
 </script>
 
 <template>
-  <ScrollPanel class="main-content">
+  <ScrollPanel>
     <h1>Ravenswatch</h1>
     <p>The fucking game, my guy</p>
-    <WikiCategoryCardList />
+    <RouterLink to="/ravenswatch/wiki/heroes">Heroes</RouterLink>
   </ScrollPanel>
 </template>
 

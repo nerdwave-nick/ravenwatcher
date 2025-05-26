@@ -54,6 +54,7 @@ body {
 }
 
 .main-content {
+  width: calc(100% - 60px);
   display: block;
   margin: 0px;
 }

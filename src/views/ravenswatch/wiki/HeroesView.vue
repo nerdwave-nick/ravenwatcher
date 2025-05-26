@@ -10,15 +10,8 @@ setBreadCrumbs(WikiBreadCrumb, HeroesBreadCrumb)
 </script>
 
 <template>
-  <div class="heroes-view-main">
-    <h1>Heroes</h1>
-    <HeroesCategory class="content" />
-  </div>
+  <h1>Heroes</h1>
+  <HeroesCategory class="content" />
 </template>
 
-<style lang="scss" scoped>
-.heroes-view-main {
-  margin: 2em;
-  margin-top: 0em;
-}
-</style>
+<style lang="scss" scoped></style>

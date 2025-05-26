@@ -21,14 +21,7 @@ setBreadCrumbs(WikiBreadCrumb, HeroesBreadCrumb, {
 </script>
 
 <template>
-  <div class="main">
-    <h1>{{ characterInfo.name }}</h1>
-  </div>
+  <h1>{{ characterInfo.name }}</h1>
 </template>
 
-<style lang="scss" scoped>
-.main {
-  margin: 2em;
-  margin-top: 0px;
-}
-</style>
+<style lang="scss" scoped></style>
