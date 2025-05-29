@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import CharacterCard from './CharacterCard.vue'
-import { AvailableCharacters } from './characters'
+import { Character } from './characters'
 </script>
 <template>
   <div class="category-list">
     <CharacterCard
       class="item"
-      v-for="(character, index) in AvailableCharacters.map((x) => x.id)"
+      v-for="(character, index) in Character"
       :character="character"
       :key="index"
     />

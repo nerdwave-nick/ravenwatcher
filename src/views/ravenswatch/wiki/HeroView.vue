@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { AvailableCharacters } from '../../../components/ravenswatch/wiki/characters'
+import {
+  Character,
+  CharacterRoutes,
+  getCharacterWikiRoute,
+} from '../../../components/ravenswatch/wiki/characters'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -11,12 +15,19 @@ import {
 const { setBreadCrumbs } = useRavenswatchBreadCrumbsStore()
 const route = useRoute()
 
+const routeAsCharacter = computed(() => {
+  if ((route.params.hero as Character) in Character) {
+    return route.params.hero as Character
+  }
+  return null
+})
+
 const characterInfo = computed(() => {
-  return AvailableCharacters.find((x) => x.id == route.params.hero)!
+  return CharacterRoutes[route.params.hero as Character]
 })
 setBreadCrumbs(WikiBreadCrumb, HeroesBreadCrumb, {
-  label: characterInfo.value.id,
-  route: characterInfo.value.route,
+  label: characterInfo.value.breadcrumb,
+  route: getCharacterWikiRoute(route.params.hero as Character),
 })
 </script>
 

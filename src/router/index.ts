@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { Character } from '@/components/ravenswatch/wiki/characters'
 
 const homeRoute: RouteRecordRaw = {
   path: '/',
@@ -14,6 +15,7 @@ const ravenswatchRoute: RouteRecordRaw = {
   children: [
     {
       path: '',
+      name: 'ravenswatch home',
       component: () => import('../views/ravenswatch/HomeView.vue'),
     },
     {
@@ -23,21 +25,26 @@ const ravenswatchRoute: RouteRecordRaw = {
       children: [
         {
           path: '',
+          name: 'ravenswatch wiki home',
           component: () => import('../views/ravenswatch/wiki/WikiHomeView.vue'),
         },
         {
+          path: '404',
+          component: () => import('../views/ravenswatch/wiki/404View.vue'),
+        },
+        {
           path: 'heroes',
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
           component: () => import('../views/ravenswatch/wiki/HeroesView.vue'),
         },
         {
           path: 'heroes/:hero',
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
           component: () => import('../views/ravenswatch/wiki/HeroView.vue'),
+          beforeEnter: (to, _, next) => {
+            if (Object.values(Character).includes(to.params.hero as Character)) {
+              return next()
+            }
+            return next('/ravenswatch/wiki/404')
+          },
         },
       ],
     },

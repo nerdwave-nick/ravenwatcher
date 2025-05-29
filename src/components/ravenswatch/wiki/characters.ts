@@ -1,85 +1,69 @@
-export type Character =
-  | 'piper'
-  | 'scarlet'
-  | 'beowulf'
-  | 'snowqueen'
-  | 'aladdin'
-  | 'melusine'
-  | 'geppetto'
-  | 'wukong'
-  | 'carmilla'
-  | 'romeo'
-  | 'juliet'
-export const AvailableCharacters: {
-  id: Character
+export enum Character {
+  Piper = 'the_pied_piper',
+  Scarlet = 'scarlet',
+  Beowulf = 'beowulf',
+  Snowqueen = 'the_snow_queen',
+  Aladdin = 'aladdin',
+  Melusine = 'melusine',
+  Geppetto = 'geppetto',
+  Wukong = 'sun_wukong',
+  Carmilla = 'carmilla',
+  Romeo = 'romeo',
+  Juliet = 'juliet',
+}
+
+export type CharacterInfo = {
   name: string
-  description: string
-  route: string
-}[] = [
-  {
-    id: 'scarlet',
+  breadcrumb: string
+}
+
+export function getCharacterWikiRoute(c: Character): string {
+  return `/ravenswatch/wiki/heroes/${c}`
+}
+
+export const CharacterRoutes: { [k in Character]: CharacterInfo } = {
+  [Character.Scarlet]: {
     name: 'Scarlet',
-    description: 'Some lil angy girl',
-    route: '/ravenswatch/wiki/heroes/scarlet',
+    breadcrumb: 'scarlet',
   },
-  {
-    id: 'piper',
+  [Character.Piper]: {
     name: 'The Pied Piper',
-    description: 'Some twink',
-    route: '/ravenswatch/wiki/heroes/piper',
+    breadcrumb: 'the pied piper',
   },
-  {
-    id: 'beowulf',
+  [Character.Beowulf]: {
     name: 'Beowulf',
-    description: 'Bimg man stronk',
-    route: '/ravenswatch/wiki/heroes/beowulf',
+    breadcrumb: 'beowulf',
   },
-  {
-    id: 'snowqueen',
+  [Character.Snowqueen]: {
     name: 'The Snow Queen',
-    description: 'Icy bitch',
-    route: '/ravenswatch/wiki/heroes/snowqueen',
+    breadcrumb: 'the snow queen',
   },
-  {
-    id: 'aladdin',
+  [Character.Aladdin]: {
     name: 'Aladdin',
-    description: 'Agile boi',
-    route: '/ravenswatch/wiki/heroes/aladdin',
+    breadcrumb: 'aladdin',
   },
-  {
-    id: 'melusine',
+  [Character.Melusine]: {
     name: 'Melusine',
-    description: 'Fisk lady',
-    route: '/ravenswatch/wiki/heroes/melusine',
+    breadcrumb: 'melusine',
   },
-  {
-    id: 'geppetto',
+  [Character.Geppetto]: {
     name: 'Geppetto',
-    description: 'Should have one less p',
-    route: '/ravenswatch/wiki/heroes/geppetto',
+    breadcrumb: 'geppetto',
   },
-  {
-    id: 'wukong',
+  [Character.Wukong]: {
     name: 'Sun Wukong',
-    description: 'Monke',
-    route: '/ravenswatch/wiki/heroes/wukong',
+    breadcrumb: 'sun wukong',
   },
-  {
-    id: 'carmilla',
+  [Character.Carmilla]: {
     name: 'Carmilla',
-    description: 'Will bite you',
-    route: '/ravenswatch/wiki/heroes/carmilla',
+    breadcrumb: 'carmilla',
   },
-  {
-    id: 'romeo',
+  [Character.Romeo]: {
     name: 'Romeo',
-    description: 'Chill guy I guess',
-    route: '/ravenswatch/wiki/heroes/romeo',
+    breadcrumb: 'romeo',
   },
-  {
-    id: 'juliet',
+  [Character.Juliet]: {
     name: 'Juliet',
-    description: 'Will fuck you up if you hurt romeo',
-    route: '/ravenswatch/wiki/heroes/juliet',
+    breadcrumb: 'juliet',
   },
-]
+}
