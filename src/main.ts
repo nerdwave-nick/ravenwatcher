@@ -20,7 +20,7 @@ app.use(PrimeVue, {
   theme: {
     preset: RavenwatcherTheme,
     options: {
-      darkModeSelector: '.dark', // disable system dark mode
+      darkModeSelector: ':root', // disable system dark mode
     },
   },
 })

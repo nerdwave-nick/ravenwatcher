@@ -4,6 +4,7 @@ import {
   CharacterRoutes,
   getCharacterWikiRoute,
 } from '../../../components/ravenswatch/wiki/characters'
+import HeroComponent from '../../../components/ravenswatch/wiki/HeroComponent.vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -15,15 +16,12 @@ import {
 const { setBreadCrumbs } = useRavenswatchBreadCrumbsStore()
 const route = useRoute()
 
-const routeAsCharacter = computed(() => {
-  if ((route.params.hero as Character) in Character) {
-    return route.params.hero as Character
-  }
-  return null
+const character = computed(() => {
+  return route.params.hero as Character
 })
 
 const characterInfo = computed(() => {
-  return CharacterRoutes[route.params.hero as Character]
+  return CharacterRoutes[character.value]
 })
 setBreadCrumbs(WikiBreadCrumb, HeroesBreadCrumb, {
   label: characterInfo.value.breadcrumb,
@@ -32,7 +30,7 @@ setBreadCrumbs(WikiBreadCrumb, HeroesBreadCrumb, {
 </script>
 
 <template>
-  <h1>{{ characterInfo.name }}</h1>
+  <HeroComponent :hero="character" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -1,0 +1,15 @@
+<script setup lang="ts">
+import imageSource from '../../../../../assets/ravenswatch/scarlet/Lycanthrope.webp'
+</script>
+<template>
+  <img class="image" :src="imageSource" :width="10" />
+</template>
+
+<style lang="scss" scoped>
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+</style>

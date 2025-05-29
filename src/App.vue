@@ -3,8 +3,6 @@ import { RouterView } from 'vue-router'
 import Sidebar from './components/SidebarComponent.vue'
 import GameSelection from './components/GameSelection.vue'
 import Toast from 'primevue/toast'
-import { useDarkMode } from './hooks/dark-mode'
-useDarkMode()
 </script>
 
 <template>
@@ -30,6 +28,17 @@ useDarkMode()
     filter: drop-shadow(0px 0px 9px var(--p-primary-color));
   }
 }
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.main-content {
+  width: calc(100% - 60px);
+  display: block;
+  margin: 0px;
+}
 </style>
 <style lang="scss">
 :root {
@@ -45,17 +54,5 @@ body {
   font-weight: 400;
   color: var(--p-text-color);
   text-decoration-color: var(--p-primary-color);
-}
-
-.app-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
-
-.main-content {
-  width: calc(100% - 60px);
-  display: block;
-  margin: 0px;
 }
 </style>
