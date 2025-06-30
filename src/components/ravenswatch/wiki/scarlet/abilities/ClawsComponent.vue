@@ -2,17 +2,21 @@
 import AbilityCard from '../../AbilityCard.vue'
 import imageSource from '../../../../../assets/ravenswatch/scarlet/Claws.webp'
 import { AbilityType } from '../../characters'
+import { ComboPointTooltip } from '../../utility'
 </script>
 <template>
-  <AbilityCard name="Lycanthrope" :image="imageSource" :type="AbilityType.Attack">
+  <AbilityCard name="Claws" :image="imageSource" :type="AbilityType.Attack">
     <ul>
-      <li>NIGHT: At nightfall, transforms into a werewolf with new abilities</li>
-      <li>DAY: At dawn, regain human form</li>
+      <li>
+        Chain together a series of claw swipes, each one dealing
+        <span class="germania-one green">15</span> damage
+      </li>
+      <li>
+        Every two consecutive attacks hitting an enemy generates one
+        <span v-tooltip.top="ComboPointTooltip" class="germania-one">COMBO POINT</span> (up to 3 can
+        be stored)
+      </li>
     </ul>
-    <p small>
-      Scarlet is INVINCIBLE while transforming<br />
-      If Scarlet has the Shapeshifter Talent, she is briefly INTANGIBLE instead
-    </p>
   </AbilityCard>
 </template>
 

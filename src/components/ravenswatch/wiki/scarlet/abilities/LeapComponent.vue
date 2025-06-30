@@ -2,17 +2,18 @@
 import AbilityCard from '../../AbilityCard.vue'
 import imageSource from '../../../../../assets/ravenswatch/scarlet/Leap.webp'
 import { AbilityType } from '../../characters'
+import { IntangibleTooltip } from '../../utility'
 </script>
 <template>
-  <AbilityCard name="Lycanthrope" :image="imageSource" :type="AbilityType.Special">
+  <AbilityCard name="Leap" :image="imageSource" :type="AbilityType.Special" cooldown="8s">
     <ul>
-      <li>NIGHT: At nightfall, transforms into a werewolf with new abilities</li>
-      <li>DAY: At dawn, regain human form</li>
+      <li>
+        An <span v-tooltip.top="IntangibleTooltip" class="germania-one">INTANGIBLE</span> jump
+        followed by a ground strike, dealing
+        <span class="germania-one green">60</span>
+        damage around the landing zone
+      </li>
     </ul>
-    <p small>
-      Scarlet is INVINCIBLE while transforming<br />
-      If Scarlet has the Shapeshifter Talent, she is briefly INTANGIBLE instead
-    </p>
   </AbilityCard>
 </template>
 

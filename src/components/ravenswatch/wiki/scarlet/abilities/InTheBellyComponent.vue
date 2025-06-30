@@ -4,14 +4,19 @@ import imageSource from '../../../../../assets/ravenswatch/scarlet/In_the_Belly.
 import { AbilityType } from '../../characters'
 </script>
 <template>
-  <AbilityCard name="Lycanthrope" :image="imageSource" :type="AbilityType.Ultimate">
+  <AbilityCard
+    name="In the Belly"
+    :image="imageSource"
+    :type="AbilityType.Ultimate"
+    cooldown="10s-90s"
+  >
     <ul>
-      <li>NIGHT: At nightfall, transforms into a werewolf with new abilities</li>
-      <li>DAY: At dawn, regain human form</li>
+      <li>Eat the closest non-boss enemy, instantly killing it</li>
+      <li>Cooldown is proportional to the eaten enemy's level</li>
     </ul>
     <p small>
-      Scarlet is INVINCIBLE while transforming<br />
-      If Scarlet has the Shapeshifter Talent, she is briefly INTANGIBLE instead
+      Using In The Belly with no target puts the ability on a
+      <span class="germania-one">10</span> second(s) cooldown
     </p>
   </AbilityCard>
 </template>

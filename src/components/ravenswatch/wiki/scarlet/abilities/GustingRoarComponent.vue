@@ -4,14 +4,17 @@ import imageSource from '../../../../../assets/ravenswatch/scarlet/Gusting_Roar.
 import { AbilityType } from '../../characters'
 </script>
 <template>
-  <AbilityCard name="Lycanthrope" :image="imageSource" :type="AbilityType.Ultimate">
+  <AbilityCard name="Gusting Roar" :image="imageSource" :type="AbilityType.Ultimate" cooldown="60s">
     <ul>
-      <li>NIGHT: At nightfall, transforms into a werewolf with new abilities</li>
-      <li>DAY: At dawn, regain human form</li>
+      <li>
+        Deal <span class="germania-one green">292</span> damage per second in a wide cone for
+        <span class="germania-one">3</span> seconds
+      </li>
     </ul>
     <p small>
-      Scarlet is INVINCIBLE while transforming<br />
-      If Scarlet has the Shapeshifter Talent, she is briefly INTANGIBLE instead
+      Scarlet can still be damaged while channeling Gusting Roar<br />Gusting Roar can be cancelled
+      early and its cooldown is proportional to the time it has been used (with a minimum of
+      <span class="germania-one">10s</span>)
     </p>
   </AbilityCard>
 </template>

@@ -47,32 +47,4 @@ const ultimateComponents = computed(() => {
   color: #b1b2b5;
   font-weight: 200;
 }
-// .trait {
-//   grid-column: span 2 / span 2;
-//   grid-column-start: 0;
-// }
-// .attack {
-//   grid-column: span 2 / span 2;
-//   grid-row-start: 2;
-// }
-// .power {
-//   grid-column: span 2 / span 2;
-//   grid-row-start: 2;
-// }
-// .special {
-//   grid-column: span 2 / span 2;
-//   grid-row-start: 3;
-// }
-// .defense {
-//   grid-column: span 2 / span 2;
-//   grid-row-start: 3;
-// }
-// .ult1 {
-//   grid-column: span 2 / span 2;
-//   grid-row-start: 4;
-// }
-// .ult2 {
-//   grid-column: span 2 / span 2;
-//   grid-row-start: 4;
-// }
 </style>

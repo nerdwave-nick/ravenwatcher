@@ -7,6 +7,7 @@ import PrimeVue from 'primevue/config'
 import ToastService from 'primevue/toastservice'
 import ConfirmationService from 'primevue/confirmationservice'
 import Ripple from 'primevue/ripple'
+import Tooltip from 'primevue/tooltip'
 
 import { RavenwatcherTheme } from './theme.ts'
 import App from './App.vue'
@@ -28,4 +29,6 @@ app.use(ConfirmationService)
 app.use(ToastService)
 
 app.directive('ripple', Ripple)
+app.directive('tooltip', Tooltip)
+
 app.mount('#app')

@@ -109,6 +109,7 @@ import LeapComponent from '../../../components/ravenswatch/wiki/scarlet/abilitie
 import HowlComponent from '../../../components/ravenswatch/wiki/scarlet/abilities/HowlComponent.vue'
 import GustingRoarComponent from '../../../components/ravenswatch/wiki/scarlet/abilities/GustingRoarComponent.vue'
 import InTheBellyComponent from '../../../components/ravenswatch/wiki/scarlet/abilities/InTheBellyComponent.vue'
+
 export const CharacterAbilities: { [k in Character]: MoveSet[] } = {
   [Character.Scarlet]: [
     {
@@ -142,15 +143,21 @@ export const CharacterAbilities: { [k in Character]: MoveSet[] } = {
   [Character.Carmilla]: [],
 }
 
-export type Talent = {
-  some?: boolean
+export enum TalentType {
+  Default = '',
+  Starter = 'STARTER',
+  UltimateUpgrade = 'ULTIMATE UPGRADE',
 }
 
+export type TalentComponent = Component | DefineComponent
+export type Talent = TalentComponent
+
+import DistantExplosionsComponent from '../../../components/ravenswatch/wiki/scarlet/talents/DistantExplosionsComponent.vue'
 export const CharacterTalents: { [k in Character]: Talent[] } = {
   [Character.Aladdin]: [],
   [Character.Romeo]: [],
   [Character.Piper]: [],
-  [Character.Scarlet]: [],
+  [Character.Scarlet]: [DistantExplosionsComponent],
   [Character.Wukong]: [],
   [Character.Melusine]: [],
   [Character.Snowqueen]: [],
