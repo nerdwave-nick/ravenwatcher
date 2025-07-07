@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AbilityCard from '../../AbilityCard.vue'
-import imageSource from '../../../../../assets/ravenswatch/scarlet/Howl.webp'
+import imageSource from '../../../../../assets/ravenswatch/scarlet/abilities/Howl.webp'
 import { AbilityType } from '../../characters'
 import { LifestealTooltip, ArmorTooltip, AbilityTooltip } from '../../utility'
 </script>

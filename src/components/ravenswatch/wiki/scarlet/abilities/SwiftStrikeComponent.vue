@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AbilityCard from '../../AbilityCard.vue'
-import imageSource from '../../../../../assets/ravenswatch/scarlet/Swift_Strike.webp'
+import imageSource from '../../../../../assets/ravenswatch/scarlet/abilities/Swift_Strike.webp'
 import { AbilityType } from '../../characters'
 import { IntangibleTooltip, ComboPointTooltip } from '../../utility'
 </script>

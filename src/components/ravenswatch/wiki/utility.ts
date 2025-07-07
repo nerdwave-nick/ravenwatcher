@@ -50,3 +50,5 @@ export const DayTooltip = makeTooltip(`The day part of the day-night cycle`)
 export const NightTooltip = makeTooltip(`The night part of the day-night cycle`)
 export const AbilityTooltip = (ability: string) =>
   makeTooltip(`<span class="germania-one">${ability}</span>`)
+export const TalentScalingTooltip = (...scales: string[]) =>
+  makeTooltip(scales.map((x) => `<span class="germania-one">${x}</span>`).join('/'))

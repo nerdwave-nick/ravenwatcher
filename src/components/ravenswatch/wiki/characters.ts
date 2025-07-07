@@ -153,11 +153,13 @@ export type TalentComponent = Component | DefineComponent
 export type Talent = TalentComponent
 
 import DistantExplosionsComponent from '../../../components/ravenswatch/wiki/scarlet/talents/DistantExplosionsComponent.vue'
+import DistantExplosionsComponentTwo from '../../../components/ravenswatch/wiki/scarlet/talents/DistantExplosionsComponentTwo.vue'
+// import DevourerComponent from '../../../components/ravenswatch/wiki/scarlet/talents/DevourerComponent.vue'
 export const CharacterTalents: { [k in Character]: Talent[] } = {
   [Character.Aladdin]: [],
   [Character.Romeo]: [],
   [Character.Piper]: [],
-  [Character.Scarlet]: [DistantExplosionsComponent],
+  [Character.Scarlet]: [DistantExplosionsComponent,DistantExplosionsComponentTwo],
   [Character.Wukong]: [],
   [Character.Melusine]: [],
   [Character.Snowqueen]: [],

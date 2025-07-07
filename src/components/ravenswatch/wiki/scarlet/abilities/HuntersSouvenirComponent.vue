@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AbilityCard from '../../AbilityCard.vue'
-import imageSource from "../../../../../assets/ravenswatch/scarlet/Hunter's_Souvenir.webp"
+import imageSource from "../../../../../assets/ravenswatch/scarlet/abilities/Hunter's_Souvenir.webp"
 import { AbilityType } from '../../characters'
 import { ChargesTooltip } from '../../utility'
 </script>

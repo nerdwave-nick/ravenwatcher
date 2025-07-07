@@ -2,7 +2,7 @@
 import { Character } from './characters.ts'
 import { defineProps, computed } from 'vue'
 import piperImage from '../../../assets/ravenswatch/The_Pied_Piper.webp'
-import scarletImage from '../../../assets/ravenswatch/Scarlet,_the_Red_Hood.webp'
+import scarletImage from '../../../assets/ravenswatch/scarlet/Scarlet,_the_Red_Hood.webp'
 import beowulfImage from '../../../assets/ravenswatch/Beowulf_and_Drake.webp'
 import melusineImage from '../../../assets/ravenswatch/Melusine.webp'
 import carmillaImage from '../../../assets/ravenswatch/Carmilla.webp'

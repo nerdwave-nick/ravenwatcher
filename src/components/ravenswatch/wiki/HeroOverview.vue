@@ -3,12 +3,12 @@ import Avatar from 'primevue/avatar'
 import CharacterImage from './CharacterImage.vue'
 import { Character } from '../../../components/ravenswatch/wiki/characters'
 const props = defineProps<{ hero: Character }>()
-import bite from '../../../assets/ravenswatch/scarlet/Bite.webp'
-import belly from '../../../assets/ravenswatch/scarlet/Leap.webp'
-import bomb from '../../../assets/ravenswatch/scarlet/Bomb.webp'
-import cloak from '../../../assets/ravenswatch/scarlet/Cloak.webp'
-import lycanthrope from '../../../assets/ravenswatch/scarlet/Lycanthrope.webp'
-import swiftstrike from '../../../assets/ravenswatch/scarlet/Swift_Strike.webp'
+import bite from '../../../assets/ravenswatch/scarlet/abilities/Bite.webp'
+import belly from '../../../assets/ravenswatch/scarlet/abilities/Leap.webp'
+import bomb from '../../../assets/ravenswatch/scarlet/abilities/Bomb.webp'
+import cloak from '../../../assets/ravenswatch/scarlet/abilities/Cloak.webp'
+import lycanthrope from '../../../assets/ravenswatch/scarlet/abilities/Lycanthrope.webp'
+import swiftstrike from '../../../assets/ravenswatch/scarlet/abilities/Swift_Strike.webp'
 </script>
 
 <template>

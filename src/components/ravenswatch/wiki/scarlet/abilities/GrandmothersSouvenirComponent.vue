@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AbilityCard from '../../AbilityCard.vue'
-import imageSource from '../../../../../assets/ravenswatch/scarlet/Grandmother_s_Souvenir.webp'
+import imageSource from '../../../../../assets/ravenswatch/scarlet/abilities/Grandmother_s_Souvenir.webp'
 import { AbilityType } from '../../characters'
 import { IntangibleTooltip } from '../../utility'
 </script>

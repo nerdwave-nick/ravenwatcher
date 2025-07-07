@@ -33,6 +33,10 @@ const { home, model } = storeToRefs(ravenswatchBreadCrumbsStore)
   --r-color-yellow: var(--p-yellow-600);
   --r-color-purple: var(--p-violet-600);
   --r-color-grey: #b1b2b5;
+  --r-color-common: var(--p-yellow-50);
+  --r-color-rare: var(--p-blue-300);
+  --r-color-epic: var(--p-violet-400);
+  --r-color-legendary: var(--p-yellow-200);
 }
 
 .germania-one {
@@ -75,6 +79,34 @@ const { home, model } = storeToRefs(ravenswatchBreadCrumbsStore)
 .purple {
   color: var(--r-color-purple);
 }
+// .common {
+//   color: var(--r-color-common);
+// }
+// .rare {
+//   color: var(--r-color-rare);
+// }
+// .epic {
+//   color: var(--r-color-epic);
+// }
+// .legendary {
+//   color: var(--r-color-legendary);
+// }
+// .common-ul {
+//   text-decoration: underline;
+//   text-decoration-color: var(--r-color-common);
+// }
+// .rare-ul {
+//   text-decoration: underline;
+//   text-decoration-color: var(--r-color-rare);
+// }
+// .epic-ul {
+//   text-decoration: underline;
+//   text-decoration-color: var(--r-color-epic);
+// }
+// .legendary-ul {
+//   text-decoration: underline;
+//   text-decoration-color: var(--r-color-legendary);
+// }
 </style>
 
 <style lang="scss" scoped>

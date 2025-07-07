@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AbilityCard from '../../AbilityCard.vue'
-import imageSource from '../../../../../assets/ravenswatch/scarlet/Lycanthrope.webp'
+import imageSource from '../../../../../assets/ravenswatch/scarlet/abilities/Lycanthrope.webp'
 import { AbilityType } from '../../characters'
 import { DayTooltip, IntangibleTooltip, InvincibleTooltip, NightTooltip } from '../../utility'
 </script>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AbilityCard from '../../AbilityCard.vue'
-import imageSource from '../../../../../assets/ravenswatch/scarlet/Bomb.webp'
+import imageSource from '../../../../../assets/ravenswatch/scarlet/abilities/Bomb.webp'
 import { AbilityType } from '../../characters'
 </script>
 <template>

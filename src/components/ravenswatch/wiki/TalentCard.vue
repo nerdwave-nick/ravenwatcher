@@ -45,6 +45,112 @@ const props = defineProps<{
   &::v-deep(.green) {
     color: var(--r-color-green);
   }
+  &::v-deep(.red) {
+    color: var(--r-color-red);
+  }
+  &::v-deep(.common) {
+    color: var(--r-color-common);
+    // margin-right: 2px;
+    // margin-left: 2px;
+  }
+  &::v-deep(.rare) {
+    color: var(--r-color-rare);
+    // margin-right: 2px;
+    // margin-left: 2px;
+  }
+  &::v-deep(.epic) {
+    color: var(--r-color-epic);
+    // margin-right: 2px;
+    // margin-left: 2px;
+  }
+  &::v-deep(.legendary) {
+    color: var(--r-color-legendary);
+    // margin-right: 2px;
+    // margin-left: 2px;
+  }
+
+  &::v-deep(.common-ul) {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  &::v-deep(.common-ul:after) {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 00%,
+      var(--r-color-common) 50%,
+      transparent 100%
+    );
+    position: absolute;
+    bottom: 0em;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  &::v-deep(.rare-ul) {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  &::v-deep(.rare-ul:after) {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      var(--r-color-rare) 50%,
+      transparent 100%
+    );
+    position: absolute;
+    bottom: 0em;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  &::v-deep(.epic-ul) {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+  &::v-deep(.epic-ul:after) {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      var(--r-color-epic) 50%,
+      transparent 100%
+    );
+    position: absolute;
+    bottom: 0em;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  &::v-deep(.legendary-ul) {
+    position: relative;
+    display: inline-block;
+  }
+  &::v-deep(.legendary-ul:after) {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      var(--r-color-legendary) 50%,
+      transparent 100%
+    );
+    position: absolute;
+    bottom: 0em;
+    left: 50%;
+    transform: translate(-50%);
+  }
 
   &::v-deep(ul) {
     margin-top: 0;
